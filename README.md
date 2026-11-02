@@ -1,12 +1,10 @@
 # Limit-Order-Book-and-Market-Making-Simulator
 Project 9 for CS 193
 
-**Project Goal 
-**
+**Project Goal**
 This fall at a club's final interview, we simulated a market with a deck of cards and took turns as market makers, and I realized I didn't really understand how markets match buyers and sellers or how a market maker decides on prices. This project is a way to simulate that and learn about more about these mechanics. 
 
-**How it works:
-**
+**How it works:**
 - Traders submit bids (to buy) and asks (to sell), each with a price and quantity
 - Orders that can't be traded right away wait in the order book, sorted by price.
 - Whenever a bid's price is greater than or equal to an ask's price, the matching engine will execute the trade
