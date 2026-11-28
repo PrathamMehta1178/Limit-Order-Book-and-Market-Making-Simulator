@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime 
 from itertools import count
 
-_next_id = count # gives each order a unique id
+_next_id = count(1) # gives each order a unique id
 
 @dataclass
 class Order:
@@ -17,7 +17,7 @@ class Order:
         if self.side not in ("buy", "sell"):
             raise ValueError(f"side must be 'buy' or 'sell', got {self.side!r}")
         if self.price <= 0 or self.quantity <= 0:
-            raise ValueError("prince and quantity must be positive")
+            raise ValueError("price and quantity must be positive")
         
 
 @dataclass(frozen=True) # this should never change since a trade is a record of something that happened
